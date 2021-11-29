@@ -38,3 +38,6 @@ function validate(e) {
         return true;
     }
 }
+
+// please do not change the css
+// add red border around required input fields with class "redBorder". Jon will make interval
