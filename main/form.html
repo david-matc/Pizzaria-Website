@@ -18,7 +18,8 @@
 <body>
 
     <h2>Order</h2>
-    <form name="orderInfo">
+    <!-- added an onsubmit for the form -->
+    <form onsubmit="return validate(event)" name="orderInfo">
 
         <!-- Pizza gallery checkbox -->
         <!-- At least one checked is required but multiple is acceptable -->
@@ -92,6 +93,7 @@
             <!-- Will contain a list of items and their prices, updated based on item selection
             Will also display the total for all items together. This should be done with JavaScript
             Need to decide menu items and prices -->
+            <span id="totalCost">0.01</span>
 
         </div>
 
