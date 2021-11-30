@@ -22,4 +22,4 @@ document.querySelector('#postal').addEventListener("blur", function() {
 
 
 
-document.orderInfo.addEventListener("submit", validate);
+// document.orderInfo.addEventListener("submit", validate);
