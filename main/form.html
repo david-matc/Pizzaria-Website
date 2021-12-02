@@ -5,8 +5,8 @@
     <!-- ******* IMPORTANT ******READ PLEASE-->
     <!-- Defer is used so as the script is executed when the page has finished parsing -->
     <script src="scripts/validate.js" defer></script>
-    <script src="scripts/events.js" defer></script>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="scripts/event.js" defer></script>
+    <link href="scripts/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -140,18 +140,21 @@
                 <input type="number" id="card" name="creditCard" maxlength="16">
             </div>
         </div>
-
+        </div>
         <!-- Pickup or Delivery, One selection is required -->
         <div class="orderType">
-            <fieldset>
+            <fieldset id='orderTypes'>
+
                 <div>
                     <input type="radio" id="pickup" name="orderType" value="pickup">
                     <label for="pickup">Pickup</label>
-                </div>
 
+                </div>
+                <div id='fieldsetError' class='alert'></div>
                 <div>
                     <input type="radio" id="delivery" name="orderType" value="delivery">
                     <label for="delivery">Delivery</label>
+
                 </div>
             </fieldset>
         </div>
@@ -160,3 +163,4 @@
         <input type="submit" value="Submit">
     </form>
 </body>
+</html>
