@@ -42,6 +42,7 @@ h1,
 h2,
 h3 {
     font-family: 'Outfit', sans-serif;
+    text-align: center;
 }
 
 h2 {
@@ -61,7 +62,8 @@ form {
     min-width: 345px;
     max-width: 800px;
     margin: auto;
-    background: lightgrey;
+    background: rgb(255, 255, 255);
+    border: solid rgb(255, 0, 0);
     padding: 15px;
     border-radius: 15px;
     display: flex;
@@ -180,10 +182,27 @@ input[type=number] {
 
 /*** 3.1 - order type styles ***/
 
+@keyframes example {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: green;
+    }
+}
+
 input[type=submit] {
     margin: 10px auto;
     width: 100px;
     height: 30px;
+    border: 10px;
+    transition: width 1s;
+}
+
+input[type=submit]:hover {
+    width: 150px;
+    animation-name: example;
+    animation-duration: 2.5s;
 }
 
 
@@ -203,4 +222,58 @@ input[type=submit] {
     .infoContainer :is(div:nth-child(3n+3)) input {
         width: 95%;
     }
+}
+
+
+/** Added majority of my css here, so you dont get mixed with it**/
+
+input[type="text"] {
+    outline: rgb(0, 0, 0);
+    padding: 4px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px 0 rgb(61, 56, 56);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    transition-duration: 0.7s;
+    transform: scale(0);
+}
+
+ :checked+label:before {
+    content: ' \2713';
+    background-color: grey;
+    transform: scale(1);
+}
+
+:checked+label:before {
+    background-color: green;
 }
