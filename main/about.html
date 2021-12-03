@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <!-- ******* IMPORTANT ******READ PLEASE-->
+        <!-- Defer is used so as the script is executed when the page has finished parsing -->
+        <script src="scripts/validate.js" defer></script>
+        <script src="scripts/events.js" defer></script>
+        <script src="scripts/about.js"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <title>About Us</title>
+</head>
+<body>
+
+  <h2><u>About Us</u></h2>
+  <p>"We are a family first pizza shop. We locally source our ingredents
+    to ensure quality. Satisfaction guarentee!"</p>
+  <p><span>Hours:</span> 11:00am - 9:00pm</p>
+  <p><span>Phone:</span> 123-456-7890</p>
+  <p><span>Location:</span> 381 Edwine, Trent Lakes, ON</p>
+
+  <div id="map">
+
+  </div>
+  <form class="" onsubmit="return validate()" action="index.html" method="get">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="">
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="">
+    <label for="message">Message:</label>
+    <input type="text" name="message" value="">
+    <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>
