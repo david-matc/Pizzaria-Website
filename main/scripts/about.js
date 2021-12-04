@@ -1,14 +1,14 @@
-const API_KEY = 'prwF7oV4mS5rE27YcGIftWYH1oAFEjOH';
+const api_key = 'prwF7oV4mS5rE27YcGIftWYH1oAFEjOH';
 const APPLICATION_NAME = 'My Application';
 const APPLICATION_VERSION = '1.0';
 
 tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
 
-const GOLDEN_GATE_BRIDGE = {lng: -122.47483, lat: 37.80776};
+const white_water_brewery = {lng: -76.886082, lat: 45.632623};
 
 var map = tt.map({
-  key: API_KEY,
+  key: api_key,
   container: 'map-div',
-  center: GOLDEN_GATE_BRIDGE,
+  center: white_water_brewery,
   zoom: 12
 });
