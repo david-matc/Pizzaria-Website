@@ -5,7 +5,10 @@
     <!-- ******* IMPORTANT ******READ PLEASE-->
     <!-- Defer is used so as the script is executed when the page has finished parsing -->
     <script src="scripts/validate.js" defer></script>
+    <!-- <script src="scripts/value.js" defer></script> -->
+
     <script src="scripts/event.js" defer></script>
+    <script src="scripts/item.js"></script>
     <link href="scripts/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,61 +30,8 @@
         <h3>Pizza Menu</h3>
         <div class="galleryContainer">
             <a class="prev">&#10094;</a>
-            <fieldset>
+            <fieldset id="items-menu">
                 <!-- Hide checkboxes with CSS -->
-                <div class="itemSlides">
-                    <div class="itemName">Pepperoni</div>
-                    <input type="checkbox" id="pepperoni" name="pizza" value="pepperoni">
-                    <label for="pepperoni">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Meat Lovers</div>
-                    <input type="checkbox" id="meatLovers" name="pizza" value="meatLovers">
-                    <label for="meatLovers">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Vegetarian</div>
-                    <input type="checkbox" id="vegetarian" name="pizza" value="vegetarian">
-                    <label for="vegetarian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Canadian</div>
-                    <input type="checkbox" id="canadian" name="pizza" value="canadian">
-                    <label for="canadian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Hawaiian</div>
-                    <input type="checkbox" id="hawaiian" name="pizza" value="hawaiian">
-                    <label for="hawaiian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Deluxe</div>
-                    <input type="checkbox" id="deluxe" name="pizza" value="deluxe">
-                    <label for="deluxe">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
             </fieldset>
             <!-- Next and previous buttons -->
 
@@ -93,7 +43,7 @@
             <!-- Will contain a list of items and their prices, updated based on item selection
             Will also display the total for all items together. This should be done with JavaScript
             Need to decide menu items and prices -->
-            <span id="totalCost">0.01</span>
+            <span id="totalCost">Empty</span>
 
         </div>
 
@@ -137,25 +87,23 @@
 
             <div>
                 <label for="card">Credit Card</label>
-                <input type="number" id="card" name="creditCard" maxlength="16">
+                <input id="card" name="creditCard" maxlength=15>
             </div>
         </div>
         </div>
         <!-- Pickup or Delivery, One selection is required -->
         <div class="orderType">
-            <fieldset>
+            <fieldset id='orderTypes'>
 
                 <div>
                     <input type="radio" id="pickup" name="orderType" value="pickup">
                     <label for="pickup">Pickup</label>
-                    <span class="alert" id="pickupError"></span>
 
                 </div>
-
+                <div id='fieldsetError' class='alert'></div>
                 <div>
                     <input type="radio" id="delivery" name="orderType" value="delivery">
                     <label for="delivery">Delivery</label>
-                    <span class="alert" id="deliveryError"></span>
 
                 </div>
             </fieldset>
@@ -164,4 +112,46 @@
         <!-- Submit button -->
         <input type="submit" value="Submit">
     </form>
+    <script>
+        /**
+         * Updates the total value of items selected in the DOM
+         * 
+         * */
+        function updateTotal() {
+            const total = getCheckedItemsValue()
+            document.querySelector("#totalCost").textContent = `$${total}`
+        }
+
+        /**
+         * Appends all items in the DOM by looping through the itemsList object
+         * 
+         * */
+        function printItemsMenu() {
+            // parent DOM node where menu items are to be appended
+            const parent = document.querySelector("#items-menu")
+                // get the keys of items object in an array
+            const keys = Object.keys(window.itemsList)
+                // loop through keys
+            keys.forEach((key) => {
+                // destructure object and get label and price from itemsList
+
+                const price = window.itemsList[key].price
+                const label = window.itemsList[key].label
+                    // append HTML string in the parent node
+                parent.innerHTML +=
+                    `<div class="itemSlides">
+                        <div class="itemName">${label}</div>
+                        <input type="checkbox" id="${key}" name="${key}" value="${key}" onchange="updateTotal()">
+                        <label for="${key}">
+                            <img src="">
+                        </label>
+                        <div class="itemPrice">$${price}</div>
+                    </div>`
+            })
+        }
+        // window.onload is a function which is called after the page is fully loaded
+        window.onload = () => {
+            printItemsMenu()
+        }
+    </script>
 </body>

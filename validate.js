@@ -6,15 +6,39 @@ var totalCost = document.querySelector('#totalCost');
 var address = document.querySelector('#address');
 var postal = document.querySelector('#postal');
 
+/*
+Returns the total value of items selected
+ */
+function getCheckedItemsValue() {
+    let val = 0
+        // get all object keys in an array
+    const keys = Object.keys(window.itemsList)
+        // loop through keys
+    keys.forEach((key) => {
+        const isChecked = document.querySelector(`#${key}`).checked
+        if (isChecked) {
+            val += window.itemsList[key].price
+        }
+    })
+    return val
+}
+
 function validate(e) {
     e.preventDefault;
-    //creating boolean value for returning
+    getCheckedItemsValue()
+        //creating boolean value for returning
+        // If pickup or delivery arent checked/ pops an error
     var valid = true;
-    if ((pickup.checked == false) || (delivery.checked == false)) {
-        document.querySelector('#pickupError').textContent = "Select Pickup";
-        document.querySelector('#deliveryError').textContent = "Select Delivery";
+    if (pickup.checked == false || delivery.checked == false) {
+        document.querySelector('#fieldsetError').textContent = "Select either of the options";
         valid = false;
     }
+    // If pickup or delivery are checked/ removes the error
+    if (pickup.checked !== false || delivery.checked !== false) {
+        document.querySelector('#fieldsetError').textContent = "";
+        valid = false;
+    }
+
     // validates if pickup is checked and atleast first and last name is entered
     if ((pickup.checked !== false)) {
         valid = true;

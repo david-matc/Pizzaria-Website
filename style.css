@@ -186,7 +186,7 @@ input[type=number] {
     0% {
         background-color: white;
     }
-    50% {
+    70% {
         background-color: green;
     }
 }
@@ -203,6 +203,21 @@ input[type=submit]:hover {
     width: 150px;
     animation-name: example;
     animation-duration: 2.5s;
+}
+
+input[type="text"] {
+    outline: rgb(0, 0, 0);
+    padding: 4px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px 0 rgb(61, 56, 56);
+}
+
+input[type="radio"] {
+    display: none;
 }
 
 
@@ -227,22 +242,7 @@ input[type=submit]:hover {
 
 /** Added majority of my css here, so you dont get mixed with it**/
 
-input[type="text"] {
-    outline: rgb(0, 0, 0);
-    padding: 4px;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-input[type="text"]:focus {
-    box-shadow: 0 0 10px 0 rgb(61, 56, 56);
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-label {
+.orderType>fieldset>div>label {
     border: 1px solid #fff;
     padding: 10px;
     display: block;
@@ -251,29 +251,31 @@ label {
     cursor: pointer;
 }
 
-label:before {
-    background-color: white;
-    color: white;
+.orderType>fieldset>div>label:before {
+    color: rgb(255, 255, 255);
     content: " ";
+    display: block;
     border-radius: 50%;
-    border: 1px solid grey;
     position: absolute;
-    top: -10px;
+    top: -5px;
     left: -5px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     text-align: center;
-    line-height: 20px;
-    transition-duration: 0.7s;
+    line-height: 28px;
+    transition-duration: .5s;
     transform: scale(0);
 }
 
- :checked+label:before {
-    content: ' \2713';
-    background-color: grey;
+.orderType>fieldset>div>:checked+label {
+    border-radius: 100%;
+    border: 1px solid red;
+    transition-duration: 1s;
     transform: scale(1);
 }
 
-:checked+label:before {
+.orderType>fieldset>div>:checked+label:before {
+    content: ' \2713';
     background-color: green;
+    transform: scale(1);
 }
