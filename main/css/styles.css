@@ -1,63 +1,3 @@
-/* stylesheet */
-/*
-*  CSS TABLE OF CONTENTS
-*
-*  A - GLOBAL/MOBILE STYLES
-*  1.0 - global page setup
-*  1.1 - global font styles
-*  1.2 - global font styles
-*  2.0 - global container styles
-*  2.1 - gallery container styles
-*  2.2 - item slides styles
-*  2.3 - cart container styles
-*  2.4 - info container styles
-*  2.5 - order type styles
-*  3.0 - button styles
-*  3.1 - order type styles
-*
-*  B - TABLET STYLES
-*  2.4 - info container styles
-*/
-
-
-
-
-
-/***============== A global/mobile version min (376-780px) ==============***/
-
-/*** 1.0 - global page setup-------------------------*/
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-
-/*** 1.1 - global font styles ***/
-
-*{
-  font-family: 'Libre Baskerville', serif;
-}
-
-h1,h2,h3{
-  font-family: 'Outfit', sans-serif;
-}
-
-h2{
-  font-size: 20pt;
-  text-align: center;
-}
-
-h3{
-
-  font-size: 16pt;
-}
-
-
-
-
-
-
 /*** scrollbar styles ***/
 
 *::-webkit-scrollbar {
@@ -89,43 +29,36 @@ h3{
 }
 
 
-
-
-
-/*** 2.0 - global container styles-------------------------*/
-
-form{
-  width: 80%;
-  min-width: 345px;
-  max-width: 800px;
-  margin: auto;
-  background: lightgrey;
-  padding: 15px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-
+body,html{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 
-/*** 2.1 - gallery container styles ***/
 
-.galleryContainer{
-  display: flex;
+
+
+/*** 1.1 - global font styles ***/
+
+*{
+  font-family: 'Libre Baskerville', serif;
 }
 
-.galleryContainer a{
-  width: 2.5%;
-  text-align: center;
-  margin: auto 3.75% auto 3.75%;
-  border: 1px solid black;
-  border-radius: 50px;
+h1,h2,h3{
+  font-family: 'Outfit', sans-serif;
+  -webkit-text-stroke: 2px;
 }
 
-.galleryContainer fieldset{
-  display: flex;
-  width: 90%;
-  flex-wrap: wrap;
+h2{
+  font-size: 20pt;
+
+}
+
+h3{
+
+  font-size: 16pt;
 }
 
 
@@ -136,142 +69,177 @@ form{
 
 
 
-/*** 2.2 - item slides styles ***/
-
-.itemSlides{
-  width: 15%;
-  margin: auto;
-}
-
-
-.itemSlides img{
+img{
   width: 100%;
 }
 
+main{
+  z-index: 10;
+
+}
 
 
 
-/*** 2.3 - cart container styles ***/
+section{
+  width: 100%;
+  height: 100vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-.cartContainer{
+
+
+
+/*** styles classes ***/
+.redBg{
+  background: #EF3A24;
+}
+
+.blueBg{
+  background: #57C9E8;
+}
+
+.greenBg{
+  background: #3EB372;
+}
+
+.yellowBg{
+  background: #FCD01B;
+}
+
+.redClr{
+  color: #EF3A24;
+}
+
+.blueClr{
+  color: #57C9E8;
+}
+
+.greenClr{
+  color: #3EB372;
+}
+
+.yellowClr{
+  color: #FCD01B;
+}
+
+.blackClr{
+  color: black;
+}
+
+
+/*** buttons ***/
+button[name='sliceBtn']{
+  width: 100px;
+  height: 100px;
+  background: none;
+  border: none;
+}
+
+button[name='sliceBtn'] img{
+  width: 90%;
+}
+
+
+
+
+
+/*** hamburger menu ***/
+
+nav{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: #7A3700;
+
+}
+
+#hamburgerMenu{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+#hamburgerMenu span{
+  width: 30px;
+  height: 5px;
+  background: black;
+  margin-top: 5px;
+  display: block;
+}
+
+
+
+/*** header ***/
+
+header{
   width: 100%;
   height: auto;
-  min-height: 50px;
-  border: 1px solid;
-  margin: 10px 0 10px 0;
 }
 
-
-
-
-
-/*** 2.4 - info container styles ***/
-
-.infoContainer{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-
-.infoContainer div{
+header figure {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0 0px 0;
+  height: auto;
+  margin: 0 auto 150px auto;
+  min-height: 300px;
 }
 
+header figure img{
+  width: 110%;
+  margin-left: -5%;
 
-.infoContainer > div > input{
-  width: 90%;
-  margin: auto;
-  border-radius: 5px;
-  border: 1px solid black;
 }
 
-/* removing the arrow on the numbers */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.infoContainer > div > label{
-  margin-left: 20px;
+header figure figcaption{
+  margin: -200px 0 0px 0;
+  text-align: center;
 }
 
 
 
-
-
-
-/*** 2.5 - order type styles ***/
-
-.orderType > fieldset{
-  display: flex;
-  margin-top: 10px;
-}
-
-.orderType > fieldset > div{
-  margin: 0 auto ;
-  padding: 10px;
-}
-
-
-
-
-
-
-
-
-/*** button styles-------------------------*/
-
-/*** 3.1 - order type styles ***/
-
-input[type=submit]{
-  margin: 10px auto;
-  width: 100px;
-  height: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***============== B tablet version (780px) ==============***/
-
-
-@media screen and (min-width: 780px){
-
-  /*** 2.4 - info container styles ***/
-
-  .infoContainer div{
-    width: 50%;
-  }
-
-  .infoContainer :is(div:nth-child(3n+3)){
+#halfCircle {
     width: 100%;
-  }
+    height: 50vw;
+    background-color: gold;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: flex;
+    justify-content: center;
 
-  .infoContainer > div > input{
-    width: 90%;
-  }
-  .infoContainer :is(div:nth-child(3n+3)) input{
-    width: 95%;
-  }
+}
+
+
+#halfCircle button{
+  margin: 25% 5% 0 5%;
+}
+
+
+
+
+
+
+
+/* *** About *** */
+
+.threeLayerHeader{
+  padding: 5px;
+}
+
+.threeLayerHeader h1{
+  font-weight: bolder;
+  font-size: 40pt;
+
+}
+
+.threeLayerHeader h1:nth-child(1){
+  margin: 0px 0 0 0px;
+}
+
+.threeLayerHeader h1:nth-child(2){
+  margin: -52px 0 0 5px;
+}
+
+.threeLayerHeader h1:nth-child(3){
+  margin: -52px 0 0 10px;
 }
