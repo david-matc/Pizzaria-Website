@@ -5,12 +5,9 @@
       <!-- ******* IMPORTANT ******READ PLEASE-->
       <!-- Defer is used so as the script is executed when the page has finished parsing -->
 
-      <script src="scripts/about.js" defer></script>
 
 
       <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
-      <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
-      <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
 
 
       <link rel="stylesheet" href="css/about.css">
@@ -21,32 +18,42 @@
       <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <title>About Us</title>
   </head>
-<body>
+<body class="yellowBg">
 
-  <h2 id="aboutUsH2"><u>About Us</u></h2>
-  <p>"We are a family first pizza shop. We locally source our ingredents
-    to ensure quality. Satisfaction guarentee!"</p>
-  <!-- <p><span>Hours:</span> 11:00am - 9:00pm</p>
-  <p><span>Phone:</span> 123-456-7890</p>
-  <p><span>Location:</span> 381 Edwine, Trent Lakes, ON</p> -->
-
-  <div id="info-container">
-    <p><span>Hours:</span> 11:00am - 9:00pm</p>
-    <p><span>Phone:</span> 123-456-7890</p>
-    <p><span>Location:</span> 381 Edwine, Trent Lakes, ON</p>
-    <div id="map-div">
-
+  <header>
+    <div class="threeLayerHeader">
+      <h1 class="blackClr">ABOUT</h1>
+      <h1 class="yellowClr">ABOUT</h1>
+      <h1 class="greenClr">ABOUT</h1>
     </div>
-  </div>
+  </header>
 
-  <form id="contactForm" class="" onsubmit="return validate()" action="index.html" method="get">
-    <label for="name">Name:</label>
-    <input type="text" name="name" value="">
-    <label for="email">Email:</label>
-    <input type="email" name="email" value="">
-    <label for="message">Message:</label>
-    <input type="text" name="message" value="">
-    <input type="submit" name="submit" value="submit">
-  </form>
+
+  <main>
+    <h4><span>"</span>We are a family first pizza shop. We locally source our ingredents
+      to ensure quality. Satisfaction guarentee!<span>"</span></h4>
+      
+    <div id="info-container">
+      <p><span>Hours:</span> 11:00am - 9:00pm</p>
+      <p><span>Phone:</span> 123-456-7890</p>
+      <p><span>Location:</span> 381 Edwine, Trent Lakes, ON</p>
+      <div id="map-div">
+
+      </div>
+    </div>
+
+    <form id="contactForm" class="" onsubmit="return validate()" action="index.html" method="get">
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="">
+      <label for="email">Email:</label>
+      <input type="email" name="email" value="">
+      <label for="message">Message:</label>
+      <input type="text" name="message" value="">
+      <input id="submitButton" type="submit" name="submit" value="submit">
+    </form>
+  </main>
 </body>
+<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+<script src="scripts/about.js" defer></script>
 </html>
