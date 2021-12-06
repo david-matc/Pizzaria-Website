@@ -1,0 +1,55 @@
+#menuNav img {
+
+    object-fit: cover;
+    position: relative;
+}
+
+#menuNav h1 {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+    width: 100%;
+    /* font-size: 50pt; */
+    top: 15vw;
+}
+
+#menuNav nav {
+    background: none;
+    top: 25vw;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+}
+
+#menuNav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25pt;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: baseline;
+}
+
+section figure {
+    width: 25vw;
+    padding: 1.5vw;
+}
+
+section h3 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    object-fit: contain;
+}
