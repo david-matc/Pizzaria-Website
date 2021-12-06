@@ -17,7 +17,6 @@ p {
 }
 
 #map-div {
-  justify-content: center;
   border: 4px solid #3EB372;
   margin-top: 10%;
   height: 50vmin;
@@ -27,12 +26,12 @@ p {
 #info-container {
   float: left;
   overflow: hidden;
-  margin: 5% 0 5% 10%;
+  margin: 5% 0 5% 20%;
 }
 
 #contactForm {
-  /* display: flex; */
-  margin: 10% 10% 0 0;
+  display: grid;
+  margin: 10% 10% 3% 10%;
   float: right;
   overflow: hidden;
   width: 100px;
@@ -52,7 +51,7 @@ p {
   background-color: #FCD01B;
 }
 
-@media (min-width:200px) and (max-width:1050px) {
+@media (min-width:200px) and (max-width:1000px) {
 
   h4 {
     text-align: center;
@@ -64,7 +63,6 @@ p {
   }
 
   #contactForm {
-    float: left;
     margin: 10% 0 5% 32%;
   }
 
