@@ -206,7 +206,7 @@ nav{
 #hamburgerMenu span{
   width: 30px;
   height: 5px;
-  background: black;
+  background: white;
   margin-top: 5px;
   display: block;
 }
@@ -250,6 +250,15 @@ nav #navLogo{
 #webMenu{
   display: none;
   height: 40px;
+
+}
+
+#webMenu a{
+  font-family: 'Outfit', sans-serif;
+  -webkit-text-stroke: 1px;
+  font-size: 16pt;
+  margin: 5px 20px 0 20px;
+  color: white;
 }
 
 
@@ -287,7 +296,6 @@ header figure figcaption{
     border-top-right-radius: 50%;
     display: flex;
     justify-content: center;
-
 }
 
 
@@ -335,11 +343,13 @@ header figure figcaption{
 #menuTile figure{
   width: 80%;
   margin: auto;
+  max-width: 400px;
 }
 
 #menuTile figure img{
   width: 100%;
   margin-top: 2%;
+
 }
 
 #menuTile figure figcaption{
@@ -411,7 +421,7 @@ header figure figcaption{
   font-size: 30pt;
   font-family: 'Outfit', sans-serif;
   -webkit-text-stroke: 1.5px;
-  transform: rotate(20deg);
+
 }
 
 .aboutQuote span:nth-child(1){
@@ -442,6 +452,10 @@ header figure figcaption{
   width: 90%;
   margin: auto;
 }
+#orderTile > h1{
+  text-align: right;
+  margin-right: 5px;
+}
 
 #orderTile a {
   width: 100%;
@@ -467,7 +481,19 @@ header figure figcaption{
   width: 98.7%;
 }
 
+#orderTile > div{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
 
+#orderTile > div > button{
+  margin: 10% 10px;
+}
+
+#orderTile > div > button:nth-child(2) > a > img{
+transform: rotate(180deg);
+}
 
 
 /* *** Footer *** */
@@ -514,7 +540,78 @@ footer{
   }
 
 
+  header{
+
+    height: 500px;
+  }
+
+  header figure {
+    height: 70%;
+    z-index: 5;
+    overflow: hidden;
+    margin-bottom: 0;
+
+  }
+
+  header figure img{
+    width: 110%;
+    margin-left: -5%;
+  }
+
+  header figure figcaption{
+    margin-top: -85%;
+  }
+
+  #halfCircle {
+    z-index: 10;
+    height: 30%;
+    border-radius: 0;
+
+  }
+
+  #halfCircle button{
+    margin-top: 10px;
+  }
+
+}
 
 
 
+
+
+
+
+@media screen and (min-width: 960px){
+  #top > figure > figcaption > img{
+
+    margin-top: -18%;
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+  #top > figure > figcaption > img{
+
+    margin-top: -16%;
+
+  }
+  header figure{
+    padding-bottom: 2%;
+  }
+
+  main{
+    margin-top: 5%;
+  }
+
+  section{
+    width: 33.3333%;
+    max-height: 500px;
+    position: static;
+
+  }
+
+  #menuTile > figure {
+    width: 70%;
+    margin-bottom: 3%;
+  }
 }
