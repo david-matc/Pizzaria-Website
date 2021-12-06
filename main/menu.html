@@ -1,156 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ******* IMPORTANT ******READ PLEASE-->
-    <!-- Defer is used so as the script is executed when the page has finished parsing -->
-    <script src="scripts/validate.js" defer></script>
-    <script src="scripts/events.js" defer></script>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="author" content="Alyssa Barratt">
+  <meta name="email" content="barr0544@algonquinlive.com">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel = "stylesheet" type="text/css" href="css/menu.css">
+  <title>our menu</title>
 </head>
-
 <body>
-    <header>
 
-    </header>
+  <nav>
+    <div id="hamburgerMenu">
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </nav>
+
+
+  <header class="greenBg">
+
+
+    <!-- <figure>
+      <img src="imgs/headerSlice.png" alt="header image">
+      <figcaption>
+        <h1>Hey Pizza</h1>
+      </figcaption>
+    </figure> -->
+
+    <div id="halfCircle" class="yellowBg">
+
+      <button type="button" name="sliceBtn">
+        <a href="about.html">
+        <img src="imgs/btn/menu.png" alt="slice">
+        <h3>About</h3>
+        </a>
+      </button>
+
+      <button type="button" name="sliceBtn">
+        <img src="imgs/btn/menu.png" alt="slice">
+        <h3>Home</h3>
+      </button>
+
+      <button type="button" name="sliceBtn">
+        <img src="imgs/btn/menu.png" alt="slice">
+        <h3>About</h3>
+      </button>
+    </div>
+
+  </header>
 
     <main>
-        <h2>Menu</h2>
-        <!-- Would be nice to have a banner here, this could just be a placeholder -->
-        <img src="imgs/menu-banner.jpg">
-        <nav>
-            <a href="menu.html#apps">
-                Appetizers
-            </a>
-            <a href="menu.html#pizza">
-                Pizzas
-            </a>
-            <a href="menu.html#meal">
-                Meals
-            </a>
-            <a href="menu.html#dessert">
-                Desserts
-            </a>
-        </nav>
+        <section id="menuNav">
+            <h1>Locally sourced, fresh ingredients</h1>
+            <img src="imgs/menu-banner.jpg">
+            <nav>
+                <a href="menu.html#apps">
+                    Appetizers
+                </a>
+                <a href="menu.html#pizza">
+                    Pizzas
+                </a>
+                <a href="menu.html#meal">
+                    Meals
+                </a>
+                <a href="menu.html#dessert">
+                    Desserts
+                </a>
+            </nav>
+        </section>
 
         <section id="apps">
             <h3>Appetizers</h3>
             <!-- Menu items should link to the corresponding item in orders.html -->
-            <a>
+            <!-- Images need resizing -->
+            <figure>
                 <img src="imgs/menu-apps-ms.jpg">
-                <p class="itemName">Mozzarella Sticks</p>
-                <p class="itemPrice">$7.00</p>
-            </a>
-            <a>
+                <p>Mozzarella Sticks</p>
+                <p>$7.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-apps-cs.jpg">
-                <span class="itemName">Chicken Caesar Salad</span>
-                <span class="itemPrice">$6.00</span>
-            </a>
-            <a>
+                <p>Chicken Caesar Salad</p>
+                <p>$6.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-apps-gb.jpg">
-                <span class="itemName">Garlic Bread</span>
-                <span class="itemPrice">$4.00</span>
-            </a>
-            <a>
+                <p>Garlic Bread</p>
+                <p>$4.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-apps-ff.jpg">
-                <span class="itemName">French Fries</span>
-                <span class="itemPrice">$4.00</span>
-            </a>
-            <a>
+                <p>French Fries</p>
+                <p>$4.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-apps-or.jpg">
-                <span class="itemName">Onion Rings</span>
-                <span class="itemPrice">$4.00</span>
-            </a>
-            <a>
+                <p>Onion Rings</p>
+                <p>$4.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-apps-dip.jpg">
-                <span class="itemName">Dips</span>
-                <span class="itemPrice">$1.00</span>
-            </a>
+                <p>Dips</p>
+                <p>$1.00</p>
+            </figure>
         </section>
 
         <section id="pizza">
             <h3>Pizzas</h3>
 
-            <a>
+            <figure>
                 <img src="imgs/menu-pizza-ch.jpg">
-                <span class="itemName">Cheese</span>
-                <span class="itemPrice">From $10.00</span>
-            </a>
-            <a href="orders.html#vegetarian">
+                <p>Cheese</p>
+                <p>From $10.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-veg.jpg">
-                <span class="itemName">Vegetarian</span>
-                <span class="itemPrice">From $12.00</span>
-            </a>
-            <a href="orders.html#pepperoni">
+                <p>Vegetarian</p>
+                <p>From $12.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-pep.jpg">
-                <span class="itemName">Pepperoni</span>
-                <span class="itemPrice">From $13.00</span>
-            </a>
-            <a href="orders.html#hawaiian">
+                <p>Pepperoni</p>
+                <p>From $13.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-hw.jpg">
-                <span class="itemName">Hawaiian</span>
-                <span class="itemPrice">From $14.00</span>
-            </a>
-            <a href="orders.html#canadian">
+                <p>Hawaiian</p>
+                <p>From $14.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-can.jpg">
-                <span class="itemName">Canadian</span>
-                <span class="itemPrice">From $14.00</span>
-            </a>
-            <a href="orders.html#deluxe">
+                <p>Canadian</p>
+                <p>From $14.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-dl.jpg">
-                <span class="itemName">Deluxe</span>
-                <span class="itemPrice">From $15.00</span>
-            </a>
-            <a href="orders.html#meatLovers">
+                <p>Deluxe</p>
+                <p>From $15.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-pizza-meat.jpg">
-                <span class="itemName">Meat Lovers</span>
-                <span class="itemPrice">From $15.00</span>
-            </a>
+                <p>Meat Lovers</p>
+                <p>From $15.00</p>
+            </figure>
         </section>
 
         <section id="meal">
-            <a>
+            <figure>
                 <img src="imgs/menu-meal-pf.jpg">
-                <span class="itemName">Pizza + Appetizer</span>
-                <span class="itemPrice">From $13.00</span>
-            </a>
-            <a>
+                <p>Pizza + Appetizer</p>
+                <p>From $13.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-meal-apps.jpg">
-                <span class="itemName">Appetizer Platter</span>
-                <span class="itemPrice">$10.00</span>
-            </a>
-            <a>
+                <p>Appetizer Platter</p>
+                <p>$10.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-meal-2pi.jpg">
-                <span class="itemName">2 Pizza Deal</span>
-                <span class="itemPrice">From $18.00</span>
-            </a>
+                <p>2 Pizza Deal</p>
+                <p>From $18.00</p>
+            </figure>
         </section>
 
         <section id="dessert">
-            <a>
+            <figure>
                 <img src="imgs/menu-dessert-br.jpg">
-                <span class="itemName">Chocolate Brownie</span>
-                <span class="itemPrice">$5.00</span>
-            </a>
-            <a>
+                <p>Chocolate Brownie</p>
+                <p>$5.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-dessert-cake.jpg">
-                <span class="itemName">Fudge Cake</span>
-                <span class="itemPrice">$10.00</span>
-            </a>
-            <a>
+                <p>Fudge Cake</p>
+                <p>$10.00</p>
+            </figure>
+            <figure>
                 <img src="imgs/menu-desserts-cb.jpg">
-                <span class="itemName">Cinnamon Bun</span>
-                <span class="itemPrice">$5.00</span>
-            </a>
+                <p>Cinnamon Bun</p>
+                <p>$5.00</p>
+            </figure>
         </section>
     </main>
 
     <footer>
-
+hi
     </footer>
 </body>
 
