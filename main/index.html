@@ -8,7 +8,7 @@
   <meta name="author" content="Jonathan Mancor">
   <meta name="email" content="jonathanmancor@algonquincollege.com">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script type="text/javascript"src="scripts/indexScripts.js">
+  <script type="text/javascript"src="scripts/index.js">
 
   </script>
   <title>hey pizza</title>
@@ -16,15 +16,36 @@
 <body>
 
   <nav>
-    <div id="hamburgerMenu">
+    <div id="hamburgerMenu" onclick="hamMenuBtn()">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
+    <aside id="mobileMenu" class="yellowBg">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">Order</a></li>
+      </ul>
+    </aside>
+
+    <aside id="webMenu" >
+      <a href="home.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="form.html">Order</a>
+    </aside>
+
+    <img id="navLogo" src="imgs/navLogo.png" alt="logo">
+
   </nav>
 
+<span id="menuCover"></span>
 
-  <header class="greenBg">
+
+  <header id="top" class="greenBg">
 
 
     <figure>
@@ -37,20 +58,24 @@
     <div id="halfCircle" class="yellowBg">
 
       <button type="button" name="sliceBtn">
-        <a href="about.html">
-        <img src="imgs/btn/menu.png" alt="slice">
+        <a href="#aboutTile">
+        <img src="imgs/btn/aboutTileBtn.png" alt="slice">
         <h3>About</h3>
         </a>
       </button>
 
       <button type="button" name="sliceBtn">
-        <img src="imgs/btn/menu.png" alt="slice">
-        <h3>Home</h3>
+        <a href="#menuTile">
+        <img src="imgs/btn/menuTileBtn.png" alt="slice">
+        <h3>Menu</h3>
+        </a>
       </button>
 
       <button type="button" name="sliceBtn">
-        <img src="imgs/btn/menu.png" alt="slice">
-        <h3>About</h3>
+        <a href="#orderTile">
+        <img src="imgs/btn/orderTileBtn.png" alt="slice">
+        <h3>Order</h3>
+        </a>
       </button>
     </div>
 
@@ -59,14 +84,40 @@
 
 
   <main>
-    <section class="redBg">
-      <p>Amazing</p>
-      <p>Flavours</p>
+    <section id="amazFlvr" class="redBg">
+      <div >
+        <h1 class="yellowClr">Amazing</h1>
+        <h1 class="yellowClr">Flavours</h1>
+      </div>
+
     </section>
-    <section class="blueBg">
-      <h1></h1>
+
+
+
+
+    <section id="menuTile" class="greenBg">
+      <figure>
+        <img src="imgs/menuPizza.png" alt="menuPizza">
+        <figcaption>
+          <h1>Menu</h1>
+        </figcaption>
+      </figure>
+      <button type="button" name="sliceBtn">
+        <a href="menu.html">
+        <img src="imgs/btn/menuTileBtn.png" alt="slice">
+        <h3>Menu</h3>
+        </a>
+      </button>
+
     </section>
-    <section class="yellowBg">
+
+    <section id="filler1" class="blueBg">
+      <p>filler</p>
+    </section>
+
+
+
+    <section id="aboutTile" class="yellowBg">
 
       <div class="threeLayerHeader">
         <h1 class="blackClr">ABOUT</h1>
@@ -74,27 +125,68 @@
         <h1 class="greenClr">ABOUT</h1>
       </div>
 
+      <div class="aboutQuote">
+        <span class="greenClr">"</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+           eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. </p>
+        <span class="greenClr">"</span>
+        <p>-The Guardian</p>
+      </div>
+
+      <button type="button" name="sliceBtn">
+        <a href="about.html">
+        <img src="imgs/btn/aboutPageBtn.png" alt="slice">
+        <h3>About</h3>
+        </a>
+      </button>
+    </section>
+
+
+    <section id="filler2" class="pinkBg">
+      <p>filler</p>
+    </section>
 
 
 
-      
+
+
+    <section id="orderTile" class="redBg">
+      <h1 class="whiteClr">ORDER</h1>
+      <form class="" action="index.html" method="post">
+        <a href="form.html">
+          <p class="whiteClr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+             eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. </p>
+          <div>
+            <input type="text" name="" value="" placeholder="First name">
+            <input type="text" name="" value="" placeholder="Last name">
+          </div>
+
+
+
+
+          <input type="text" name="" value="" placeholder="Address">
+        </a>
+      </form>
+
     </section>
-    <section class="redBg">
-      <h1></h1>
-    </section>
-    <section class="blueBg">
-      <img src="" alt="">
-    </section>
-    <section class="greenBg">
-      <p>text</p>
-    </section>
+
   </main>
 
 
 
 
-  <footer>
-    hello
+  <footer class="blackBg">
+
+
+    <button id="backToTop" type="button" name="sliceBtn">
+      <a href="#top">
+      <img src="imgs/btn/menuTileBtn.png" alt="slice">
+      </a>
+    </button>
   </footer>
 
 </body>
