@@ -137,13 +137,14 @@
 
                 const price = window.itemsList[key].price
                 const label = window.itemsList[key].label
+                const img = window.itemsList[key].img
                     // append HTML string in the parent node
                 parent.innerHTML +=
                     `<div class="itemSlides">
                         <div class="itemName">${label}</div>
                         <input type="checkbox" id="${key}" name="${key}" value="${key}" onchange="updateTotal()">
                         <label for="${key}">
-                            <img src="">
+                            <img src="${img}">
                         </label>
                         <div class="itemPrice">$${price}</div>
                     </div>`
