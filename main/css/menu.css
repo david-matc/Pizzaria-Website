@@ -1,5 +1,5 @@
 #menuNav img {
-
+    height: 100%;
     object-fit: cover;
     position: relative;
 }
@@ -33,23 +33,71 @@
 section {
     display: flex;
     flex-wrap: wrap;
-    background: #fff;
     flex-direction: row;
     align-content: flex-start;
     align-items: baseline;
 }
 
+section:not(#menuNav){
+    padding: 1rem;
+}
+
 section figure {
-    width: 25vw;
-    padding: 1.5vw;
+    width: 18vw;
+    height: 40%;
+    max-height: 300px;
+    margin: 2vw 3vw 1vw 0;
+    padding: 1vw 1.2vw 1vw 1.2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+figure img {
+    
+    object-fit: contain;
 }
 
 section h3 {
     width: 100%;
     margin: 0;
     padding: 0;
+    letter-spacing: 3px;
 }
 
-figure img {
-    object-fit: contain;
+.yellowShadow {
+    text-shadow: -4px -4px 0 #FCD01B, -6px -6px 0 #fff;
 }
+
+.blueShadow {
+    text-shadow: -4px -4px 0 #57C9E8, -8px -8px 0 #fff;
+}
+
+
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+}
+
+figcaption h4 {
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    height: 3rem;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+}
+
+span {
+    font-size: 12px;
+}
+
+
+
