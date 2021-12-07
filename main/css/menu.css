@@ -35,11 +35,11 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    align-items: baseline;
+    justify-content: flex-start;
 }
 
 section:not(#menuNav){
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 section figure {
@@ -47,7 +47,7 @@ section figure {
     height: 40%;
     max-height: 300px;
     margin: 2vw 3vw 1vw 0;
-    padding: 1vw 1.2vw 1vw 1.2vw;
+    padding: 1vw 1.6vw 1vw 1.6vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -56,8 +56,9 @@ section figure {
 }
 
 figure img {
-    
-    object-fit: contain;
+    height: 45%;
+    width: 100%;
+    object-fit: cover;
 }
 
 section h3 {
@@ -80,23 +81,21 @@ section h3 {
 figcaption {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0.5rem 0;
 }
 
 figcaption h4 {
     padding: 0;
     font-family: 'Outfit', sans-serif;
     height: 3rem;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 span {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
