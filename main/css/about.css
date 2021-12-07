@@ -1,3 +1,4 @@
+
 h4 {
   text-align: center;
   font-size: 46px;
@@ -27,12 +28,11 @@ p {
 #info-container {
   float: left;
   overflow: hidden;
-  margin: 5% 0 5% 10%;
+  margin: 5% 0 5% 20%;
 }
 
 #contactForm {
-  /* display: flex; */
-  margin: 10% 10% 0 0;
+  margin: 10% 10% 0 10%;
   float: right;
   overflow: hidden;
   width: 100px;
@@ -52,7 +52,11 @@ p {
   background-color: #FCD01B;
 }
 
-@media (min-width:200px) and (max-width:1050px) {
+p:hover {
+  color: #3EB372;
+}
+
+@media (min-width:200px) and (max-width:1000px) {
 
   h4 {
     text-align: center;

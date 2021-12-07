@@ -1,7 +1,7 @@
 /*** scrollbar styles ***/
 
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 
 }
 
@@ -42,6 +42,9 @@ body,html{
 
 /*** 1.1 - global font styles ***/
 
+
+
+
 *{
   font-family: 'Libre Baskerville', serif;
 }
@@ -49,6 +52,12 @@ body,html{
 h1,h2,h3{
   font-family: 'Outfit', sans-serif;
   -webkit-text-stroke: 2px;
+}
+
+
+h1{
+  font-size: 40pt;
+
 }
 
 h2{
@@ -59,6 +68,13 @@ h2{
 h3{
 
   font-size: 16pt;
+}
+
+
+a, a:active{
+  color: black;
+  text-decoration: none;
+
 }
 
 
@@ -108,6 +124,20 @@ section{
   background: #FCD01B;
 }
 
+.pinkBg{
+  background: #F8B4BC
+}
+
+.blackBg{
+  background: black;
+}
+
+.whiteBg{
+  background: white;
+}
+
+
+
 .redClr{
   color: #EF3A24;
 }
@@ -124,8 +154,14 @@ section{
   color: #FCD01B;
 }
 
+
+
 .blackClr{
   color: black;
+}
+
+.whiteClr{
+  color: white;
 }
 
 
@@ -139,8 +175,14 @@ button[name='sliceBtn']{
 
 button[name='sliceBtn'] img{
   width: 90%;
+  margin: 0 auto -5px auto;
 }
 
+button[name='sliceBtn'] h3{
+  font-size: 16pt;
+  -webkit-text-stroke: 0px;
+
+}
 
 
 
@@ -164,11 +206,60 @@ nav{
 #hamburgerMenu span{
   width: 30px;
   height: 5px;
-  background: black;
+  background: white;
   margin-top: 5px;
   display: block;
 }
 
+
+nav #mobileMenu{
+  position: absolute;
+  width: 200px;
+  height: 95vh ;
+  z-index: 100;
+  margin-left: -200px;
+  transition: 500ms;
+  overflow: hidden;
+}
+nav #navLogo{
+  width: 30px;
+  height: auto;
+  margin-top: -35px;
+  float: right;
+}
+
+
+#mobileMenu ul li{
+  font-size: 14pt;
+}
+
+#menuCover{
+  position: absolute;
+  display: block;
+  background: black;
+  width: 100%;
+  height: 95vh;
+  margin-top: 40px;
+  margin-left: -100%;
+  z-index: 90;
+  opacity: 0.6;
+  transition: 500ms;
+}
+
+
+#webMenu{
+  display: none;
+  height: 40px;
+
+}
+
+#webMenu a{
+  font-family: 'Outfit', sans-serif;
+  -webkit-text-stroke: 1px;
+  font-size: 16pt;
+  margin: 5px 20px 0 20px;
+  color: white;
+}
 
 
 /*** header ***/
@@ -201,18 +292,86 @@ header figure figcaption{
 #halfCircle {
     width: 100%;
     height: 50vw;
-    background-color: gold;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     display: flex;
     justify-content: center;
-
 }
 
 
 #halfCircle button{
-  margin: 25% 5% 0 5%;
+  margin: 20% 5% 0 5%;
 }
+
+/* *** Amazing Flavours *** */
+
+#amazFlvr div{
+  width: 90%;
+  margin:  auto;
+  padding: 5%;
+
+}
+
+
+#amazFlvr h1{
+  font-size: 50pt;
+  padding: 10px;
+}
+
+#amazFlvr h1:nth-child(1){
+  margin-bottom: 35%;
+}
+
+#amazFlvr h1:nth-child(2){
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+/* *** Menu *** */
+#menuTile{
+  display: flex;
+  flex-direction: column;
+}
+#menuTile figure{
+  width: 80%;
+  margin: auto;
+  max-width: 400px;
+}
+
+#menuTile figure img{
+  width: 100%;
+  margin-top: 2%;
+
+}
+
+#menuTile figure figcaption{
+  width: 100%;
+  margin-top: -55%;
+  text-align: center;
+}
+
+#menuTile button{
+  margin: 27% auto;
+  width: 70px;
+}
+
+#menuTile button img{
+ transform: rotate(180deg);
+}
+
+
+
+
+
+
 
 
 
@@ -242,4 +401,217 @@ header figure figcaption{
 
 .threeLayerHeader h1:nth-child(3){
   margin: -52px 0 0 10px;
+}
+
+
+
+
+.aboutQuote{
+  width: 80%;
+  margin: 30px auto;
+}
+
+.aboutQuote p{
+  margin-top: -20px;
+
+}
+
+.aboutQuote :is(span:nth-child(1), span:nth-child(3)){
+  width: 100%;
+  font-size: 30pt;
+  font-family: 'Outfit', sans-serif;
+  -webkit-text-stroke: 1.5px;
+
+}
+
+.aboutQuote span:nth-child(1){
+  margin-left: -5%;
+
+}
+
+.aboutQuote span:nth-child(3){
+  margin-top: -10px;
+  margin-left: 100%;
+}
+
+
+#aboutTile > button{
+  float: right;
+  margin-top: -50px;
+  margin-right: 5%;
+  width: 70px;
+}
+
+
+
+
+/* *** Orders *** */
+
+
+#orderTile  form{
+  width: 90%;
+  margin: auto;
+}
+#orderTile > h1{
+  text-align: right;
+  margin-right: 5px;
+}
+
+#orderTile a {
+  width: 100%;
+}
+
+#orderTile > form > a > div{
+  width: 100%;
+  display: flex;
+  margin: 10px auto 10px auto;
+
+}
+
+#orderTile > form > a > div > input:nth-child(1){
+  margin-right: 10%;
+}
+
+#orderTile > form > a > div > :is(input:nth-child(1),input:nth-child(2)){
+  width: 45%;
+
+}
+
+#orderTile > form > a > input{
+  width: 98.7%;
+}
+
+#orderTile > div{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+#orderTile > div > button{
+  margin: 10% 10px;
+}
+
+#orderTile > div > button:nth-child(2) > a > img{
+transform: rotate(180deg);
+}
+
+
+/* *** Footer *** */
+
+
+footer{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#backToTop{
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+
+}
+
+
+
+
+@media screen and (min-width: 780px){
+
+  #hamburgerMenu{
+    display: none;
+  }
+  #webMenu{
+    display: flex;
+  }
+
+  main{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+
+
+  section{
+    width: 33.3333%;
+    max-height: 400px;
+    position: static;
+
+  }
+
+
+  header{
+
+    height: 500px;
+  }
+
+  header figure {
+    height: 70%;
+    z-index: 5;
+    overflow: hidden;
+    margin-bottom: 0;
+
+  }
+
+  header figure img{
+    width: 110%;
+    margin-left: -5%;
+  }
+
+  header figure figcaption{
+    margin-top: -85%;
+  }
+
+  #halfCircle {
+    z-index: 10;
+    height: 30%;
+    border-radius: 0;
+
+  }
+
+  #halfCircle button{
+    margin-top: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 960px){
+  #top > figure > figcaption > img{
+
+    margin-top: -18%;
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+  #top > figure > figcaption > img{
+
+    margin-top: -16%;
+
+  }
+  header figure{
+    padding-bottom: 2%;
+  }
+
+  main{
+    margin-top: 5%;
+  }
+
+  section{
+    width: 33.3333%;
+    max-height: 500px;
+    position: static;
+
+  }
+
+  #menuTile > figure {
+    width: 70%;
+    margin-bottom: 3%;
+  }
 }
