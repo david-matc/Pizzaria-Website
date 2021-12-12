@@ -13,7 +13,8 @@
 </head>
 <body>
 
-  <nav>
+  <!-- Needs updating -->
+    <nav>
     <div id="hamburgerMenu">
       <p></p>
       <p></p>
@@ -24,15 +25,8 @@
 
   <header class="greenBg">
 
-
-    <!-- <figure>
-      <img src="imgs/headerSlice.png" alt="header image">
-      <figcaption>
-        <h1>Hey Pizza</h1>
-      </figcaption>
-    </figure> -->
-
-    <div id="halfCircle" class="yellowBg">
+    <!-- Needs updating -->
+    <div id="halfCircle" class="yellowBg"> 
 
       <button type="button" name="sliceBtn">
         <a href="about.html">
@@ -52,39 +46,38 @@
       </button>
     </div>
 
+    <div id="menuNav">
+        <h1>Locally sourced, fresh ingredients</h1>
+        <img src="imgs/menu-banner.jpg">
+        <nav>
+            <a href="menu.html#apps">
+                Appetizers
+            </a>
+            <a href="menu.html#pizza">
+                Pizzas
+            </a>
+            <a href="menu.html#meal">
+                Meals
+            </a>
+            <a href="menu.html#dessert">
+                Desserts
+            </a>
+        </nav>
+    </div>
+
   </header>
 
     <main>
-        <section id="menuNav">
-            <h1>Locally sourced, fresh ingredients</h1>
-            <img src="imgs/menu-banner.jpg">
-            <nav>
-                <a href="menu.html#apps">
-                    Appetizers
-                </a>
-                <a href="menu.html#pizza">
-                    Pizzas
-                </a>
-                <a href="menu.html#meal">
-                    Meals
-                </a>
-                <a href="menu.html#dessert">
-                    Desserts
-                </a>
-            </nav>
-        </section>
-
+        <!-- Buttons need to be linked to corresponding section of orders page -->
         <section id="apps" class="greenBg">
-            <h3 class="redClr">Appetizers</h3>
-            <!-- Menu items should link to the corresponding item in orders.html -->
-            <!-- Images need resizing -->
+            <h3 class="greenShadow">Appetizers</h3>
             <figure>
                 <img src="imgs/menu-apps-ms.jpg" alt="Mozzarella sticks">
-                <figcaption>
+                <figcaption class="hidden">
                     <h4>Mozzarella Sticks</h4>
                     <p>$7.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-apps-cs.jpg" alt="Chicken caesar salad">
@@ -92,7 +85,7 @@
                     <h4>Caesar Salad</h4>
                     <p>$6.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-apps-gb.jpg" alt="Garlic bread">
@@ -100,7 +93,7 @@
                     <h4>Garlic Bread</h4>
                     <p>$4.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-apps-ff.jpg" alt="French fries">
@@ -108,7 +101,7 @@
                     <h4>French Fries</h4>
                     <p>$4.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-apps-or.jpg" alt="Onion rings">
@@ -116,7 +109,7 @@
                     <h4>Onion Rings</h4>
                     <p>$4.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-apps-dip.jpg" alt="Variety of dips">
@@ -124,12 +117,12 @@
                     <h4>Dips</h4>
                     <p>$1.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
         </section>
 
         <section id="pizza" class="redBg">
-            <h3 class="greenClr">Pizzas</h3>
+            <h3 class="redShadow">Pizzas</h3>
 
             <figure>
                 <img src="imgs/menu-pizza-ch.jpg" alt="Cheese pizza">
@@ -137,7 +130,7 @@
                     <h4>Cheese</h4>
                     <p><span>From</span> $10.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-veg.jpg" alt="Vegetarian pizza">
@@ -145,7 +138,7 @@
                     <h4>Vegetarian</h4>
                     <p><span>From</span> $12.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-pep.jpg" alt="Pepperoni pizza">
@@ -153,7 +146,7 @@
                     <h4>Pepperoni</h4>
                     <p><span>From</span> $13.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-hw.jpg" alt="Hawaiian pizza">
@@ -161,7 +154,7 @@
                     <h4>Hawaiian</h4>
                     <p><span>From</span> $14.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-can.jpg" alt="Canadian pizza">
@@ -169,7 +162,7 @@
                     <h4>Canadian</h4>
                     <p><span>From</span> $14.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-dl.jpg" alt="Deluxe pizza">
@@ -177,7 +170,7 @@
                     <h4>Deluxe</h4>
                     <p><span>From</span> $15.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-pizza-meat.jpg" alt="Meat lovers pizza">
@@ -185,12 +178,12 @@
                     <h4>Meat Lovers</h4>
                     <p><span>From</span> $15.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
         </section>
 
         <section id="meal" class="yellowBg">
-            <h3 class="blueShadow">Meals</h3>
+            <h3 class="yellowShadow">Meals</h3>
 
             <figure>
                 <img src="imgs/menu-meal-pf.jpg" alt="Pizza with fries">
@@ -198,7 +191,7 @@
                     <h4>Pizza + Appetizer</h4>
                     <p><span>From</span> $13.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-meal-apps.jpg" alt="Onion rings with veggies and chicken">
@@ -206,7 +199,7 @@
                     <h4>Appetizer Platter</h4>
                     <p>$10.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-meal-2pi.jpg" alt="Two pizzas">
@@ -214,7 +207,7 @@
                     <h4>2 Pizza Deal</h4>
                     <p><span>From</span> $18.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
         </section>
 
@@ -227,7 +220,7 @@
                     <h4>Chocolate Brownie</h4>
                     <p>$5.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-dessert-cake.jpg" alt="Fudge cake">
@@ -235,7 +228,7 @@
                     <h4>Fudge Cake</h4>
                     <p>$10.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
             <figure>
                 <img src="imgs/menu-desserts-cb.jpg" alt="Cinnamon buns">
@@ -243,11 +236,12 @@
                     <h4>Cinnamon Bun</h4>
                     <p>$5.00</p>
                 </figcaption>
-                <button type="button">order</button>
+                <button type="button" class="menuOrder">Order</button>
             </figure>
         </section>
     </main>
 
+    <!-- Needs updating -->
     <footer>
 hi
     </footer>
