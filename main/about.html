@@ -42,13 +42,16 @@
       </div>
     </div>
 
-    <form id="contactForm" class="" onsubmit="return validate()" action="index.html" method="get">
+    <form id="contactForm" class="" onsubmit="return validate(event)" action="index.html" method="get">
       <label for="name">Name:</label>
-      <input type="text" name="name" value="">
+      <input class="input" type="text" name="name" value="">
+      <span class="errorSpan">Please enter a name</span>
       <label for="email">Email:</label>
-      <input type="email" name="email" value="">
+      <input class="input" type="email" name="email" value="">
+      <span class="errorSpan">Please enter a valid email</span>
       <label for="message">Message:</label>
-      <input type="text" name="message" value="">
+      <input class="input" type="text" name="message" value="">
+      <span class="errorSpan">Please leave a message</span>
       <input id="submitButton" type="submit" name="submit" value="submit">
     </form>
   </main>

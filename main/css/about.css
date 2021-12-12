@@ -1,3 +1,6 @@
+header {
+  height: 100px;
+}
 
 h4 {
   text-align: center;
@@ -32,7 +35,7 @@ p {
 }
 
 #contactForm {
-  margin: 10% 10% 0 10%;
+  margin-bottom: 5%;
   float: right;
   overflow: hidden;
   width: 100px;
@@ -54,6 +57,10 @@ p {
 
 p:hover {
   color: #3EB372;
+}
+
+.alert {
+  color: red;
 }
 
 @media (min-width:200px) and (max-width:1000px) {
