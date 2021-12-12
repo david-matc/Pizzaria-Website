@@ -19,3 +19,26 @@ window.addEventListener("load", function(){
 
 //there are console errors for using this library locally.
 // The solution would be to host it on a secure server
+
+var contactForm = document.querySelector('#contactForm');
+var allInputs = document.querySelectorAll('.input');
+var allErrors = document.querySelectorAll('.errorSpan')
+var submitButton = document.querySelector('#submitButton');
+
+function validate(e) {
+  var counter = 0
+  e.preventDefault();
+  for (var i=0; i<allInputs.length; i++) {
+    if (allInputs[i].id == "submitButton") {
+      continue;
+    } else if (allInputs[i].value == "") {
+      allErrors[i].classList = 'alert';
+      counter = 1
+    }
+  }
+  if (counter == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}

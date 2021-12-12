@@ -60,6 +60,25 @@ section:not(#menuNav){
     padding: 0.5em;
 }
 
+section figure {
+    width: 18vw;
+    height: 40%;
+    max-height: 300px;
+    margin: 2vw 3vw 1vw 0;
+    padding: 1vw 1.6vw 1vw 1.6vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+figure img {
+    height: 45%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* Section Header Styling */
 section h3 {
     width: 100%;
