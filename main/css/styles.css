@@ -541,8 +541,8 @@ footer{
 
 
   header{
-
-    height: 500px;
+    /* have to comment out or it messes with the about page. I can't seem to overwrite it ~ Dave */
+    /* height: 500px; */
   }
 
   header figure {
