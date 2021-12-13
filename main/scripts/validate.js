@@ -6,22 +6,51 @@ var totalCost = document.querySelector('#totalCost');
 var address = document.querySelector('#address');
 var postal = document.querySelector('#postal');
 
+/*
+Returns the total value of items selected
+ */
+function getCheckedItemsValue() {
+    let val = 0
+        // get all object keys in an array
+    const keys = Object.keys(window.itemsList)
+        // loop through keys
+    keys.forEach((key) => {
+        const isChecked = document.querySelector(`#${key}`).checked
+        if (isChecked) {
+            val += window.itemsList[key].price
+        }
+    })
+    return val
+}
+
 function validate(e) {
     e.preventDefault;
-    //creating boolean value for returning
+    getCheckedItemsValue()
+        //creating boolean value for returning
+        // If pickup or delivery arent checked/ pops an error
     var valid = true;
-    if ((pickup.checked == false) || (delivery.checked == false)) {
-        document.querySelector('#pickupError').textContent = "Select 1";
-        document.querySelector('#deliveryError').textContent = "Select 1";
+    if (pickup.checked == false && delivery.checked == false) {
+        document.querySelector('#fieldsetError').textContent = "Select either of the options";
         valid = false;
     }
+    // If pickup or delivery are checked/ removes the error
+    if (pickup.checked !== false || delivery.checked !== false) {
+        document.querySelector('#fieldsetError').textContent = "";
+        valid = false;
+    }
+
     // validates if pickup is checked and atleast first and last name is entered
     if ((pickup.checked !== false)) {
         valid = true;
     }
+    // form wont validate if nothing is selected
+    if (totalCost.textContent == '0') {
+        valid = false;
+        document.querySelector('#totalCostError').textContent = 'Add something to cart'
+    }
 
     // if the total cost of the items != 0 and  delivery or pickup NOT selected, then return false
-    if (totalCost.textContent != 0.00 && delivery.value != "" || pickup.value != "") {
+    if (totalCost.textContent !== '0' && delivery.value != "" || pickup.value != "") {
         // if either the first or last name are blank, dont submit
         if (fName.value == "" || lName.value == "") {
             if (fName.value == "") {
