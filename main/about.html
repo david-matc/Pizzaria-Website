@@ -18,7 +18,39 @@
       <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <title>About Us</title>
   </head>
+
 <body class="yellowBg">
+
+  <nav>
+    <div id="hamburgerMenu" onclick="hamMenuBtn()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <aside id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <hr>
+        <li><a href="menu.html">Menu</a></li>
+        <hr>
+        <li><a href="about.html">About</a></li>
+        <hr>
+        <li><a href="form.html">Order</a></li>
+        <hr>
+      </ul>
+    </aside>
+
+    <aside id="webMenu">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="form.html">Order</a>
+    </aside>
+
+    <img id="navLogo" src="imgs/navLogo.png" alt="logo">
+
+  </nav>
 
   <header>
     <div class="threeLayerHeader">
@@ -59,4 +91,5 @@
 <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
 <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
 <script src="scripts/about.js" defer></script>
+<script src="scripts/index.js"></script>
 </html>

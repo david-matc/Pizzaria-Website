@@ -1,4 +1,14 @@
+body {
+  overflow: auto;
+}
+
+nav {
+  z-index: 10;
+}
+
 header {
+  z-index: 5;
+  margin: 4% 0 0 2%;
   height: 100px;
 }
 
@@ -45,6 +55,7 @@ p {
 }
 
 #contactForm input {
+  background-color: white;
   padding-top: 10px;
   padding-bottom: 20px;
   margin-top: 5%;
@@ -52,7 +63,11 @@ p {
 }
 
 #submitButton {
-  background-color: #FCD01B;
+    margin: 10px auto;
+    width: 100px;
+    height: 30px;
+    border: 10px;
+    color: #FCD01B;
 }
 
 p:hover {
