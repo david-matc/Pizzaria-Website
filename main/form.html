@@ -5,8 +5,13 @@
     <!-- ******* IMPORTANT ******READ PLEASE-->
     <!-- Defer is used so as the script is executed when the page has finished parsing -->
     <script src="scripts/validate.js" defer></script>
-    <script src="scripts/events.js" defer></script>
+    <!-- <script src="scripts/value.js" defer></script> -->
+    <script src="scripts/index.js"></script>
+    <script src="scripts/event.js" defer></script>
+    <script src="scripts/item.js" defer></script>
+    <link href="css/form.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,77 +20,61 @@
 
 <!-- This is only the order form section of the contact/order page, not the entire content. Not final. -->
 
-<body>
+<body class='redBg'>
+    <nav>
+        <div id="hamburgerMenu" onclick="hamMenuBtn()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <h2>Order</h2>
+        <aside id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="menu.html">Menu</a></li>
+                <hr>
+                <li><a href="about.html">About</a></li>
+                <hr>
+                <li><a href="form.html">Order</a></li>
+                <hr>
+            </ul>
+        </aside>
+
+        <aside id="webMenu">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="form.html">Order</a>
+        </aside>
+
+        <img id="navLogo" src="images/navLogo.png" alt="logo">
+
+    </nav>
+
+    <span id="menuCover"></span>
+
+    <header  id="top">
+        <div class="threeLayerHeader">
+            <h1 class="blackClr">FORM</h1>
+            <h1 class="yellowClr">FORM</h1>
+            <h1 class="greenClr">FORM</h1>
+        </div>
+    </header>
     <!-- added an onsubmit for the form -->
-    <form onsubmit="return validate(event)" name="orderInfo">
+    <form onsubmit="return validate(event)" name="orderInfo" class="yellowBg">
 
         <!-- Pizza gallery checkbox -->
         <!-- At least one checked is required but multiple is acceptable -->
         <!-- Incomplete until we decide menu items and prices -->
         <h3>Pizza Menu</h3>
         <div class="galleryContainer">
-            <a class="prev">&#10094;</a>
-            <fieldset>
+            <a></a>
+            <fieldset id="items-menu">
                 <!-- Hide checkboxes with CSS -->
-                <div class="itemSlides">
-                    <div class="itemName">Pepperoni</div>
-                    <input type="checkbox" id="pepperoni" name="pizza" value="pepperoni">
-                    <label for="pepperoni">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Meat Lovers</div>
-                    <input type="checkbox" id="meatLovers" name="pizza" value="meatLovers">
-                    <label for="meatLovers">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Vegetarian</div>
-                    <input type="checkbox" id="vegetarian" name="pizza" value="vegetarian">
-                    <label for="vegetarian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Canadian</div>
-                    <input type="checkbox" id="canadian" name="pizza" value="canadian">
-                    <label for="canadian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Hawaiian</div>
-                    <input type="checkbox" id="hawaiian" name="pizza" value="hawaiian">
-                    <label for="hawaiian">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
-
-                <div class="itemSlides">
-                    <div class="itemName">Deluxe</div>
-                    <input type="checkbox" id="deluxe" name="pizza" value="deluxe">
-                    <label for="deluxe">
-                        <img src="">
-                    </label>
-                    <div class="itemPrice">$0.00</div>
-                </div>
             </fieldset>
             <!-- Next and previous buttons -->
-
-            <a class="next">&#10095;</a>
+            <a></a>
         </div>
 
         <!-- Cart, Items and Prices -->
@@ -93,7 +82,8 @@
             <!-- Will contain a list of items and their prices, updated based on item selection
             Will also display the total for all items together. This should be done with JavaScript
             Need to decide menu items and prices -->
-            <span id="totalCost">0.01</span>
+            <span id="totalCost">0</span><br>
+            <span class='alert' id="totalCostError"></span>
 
         </div>
 
@@ -137,21 +127,24 @@
 
             <div>
                 <label for="card">Credit Card</label>
-                <input type="number" id="card" name="creditCard" maxlength="16">
+                <input id="card" name="creditCard" maxlength=15>
             </div>
         </div>
-
+        </div>
         <!-- Pickup or Delivery, One selection is required -->
         <div class="orderType">
-            <fieldset>
-                <div>
-                    <input type="radio" id="pickup" name="orderType" value="pickup">
-                    <label for="pickup">Pickup</label>
-                </div>
+            <fieldset id='orderTypes'>
 
                 <div>
-                    <input type="radio" id="delivery" name="orderType" value="delivery">
+                    <input type="radio" id="pickup" name="orderType" value="pickup" onchange="onDeliveryTypeChange()">
+                    <label for="pickup">Pickup</label>
+
+                </div>
+                <div id='fieldsetError' class='alert'></div>
+                <div>
+                    <input type="radio" id="delivery" name="orderType" value="delivery" onchange="onDeliveryTypeChange()">
                     <label for="delivery">Delivery</label>
+
                 </div>
             </fieldset>
         </div>
@@ -159,4 +152,39 @@
         <!-- Submit button -->
         <input type="submit" value="Submit">
     </form>
+    <footer class="blackBg">
+         <div class="container">
+            <div class="footer-content">
+
+                <div class="items">
+                    <h3> Address</h3>
+                    <ul>
+                        <li>1385 Woodroffe Ave</li>
+                        <li>Nepean</li>
+                        <li>ON K2G 1V8</li>
+                        <li>Ottawa </li><br>
+
+                    </ul>
+                </div>
+                <button id="backToTop" type="button" name="sliceBtn">
+                  <a href="#top">
+                  <img src="images/menuTileBtn.png" alt="slice">
+                  </a>
+                </button>
+                <div class="items">
+                    <h3>Contacts</h3>
+                    <ul>
+
+                        <li>Email: support@heypizza.com</a>
+                            <li>Phone: +1 (0) 000 0000 001
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </footer>
 </body>
+
+
+</html>
+
